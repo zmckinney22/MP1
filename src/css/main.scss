@@ -1,1 +1,342 @@
-/* Your SCSS here. */
+$color-navbar: #4863A0;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: $color-navbar;
+    z-index: 1000;
+
+}
+
+.nav-content {
+    width: 100%;
+    padding: 26px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.25s ease;
+}
+
+.navbar.is-scrolled {
+    .nav-content {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transition: padding 0.25s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    margin-left: auto;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        transition: padding 0.25s ease;
+    }
+
+    a:hover {
+        color: orange;
+    }
+}
+
+.banner {
+    min-height: 40vh;
+    background: orange;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px;
+}
+    
+#about img {
+    width: 180px;
+    height: 180px;
+}
+
+section {
+    width: 100%;
+    padding: 80px 20px;
+}
+
+section:nth-child(even) {
+    background: orange;
+}
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.carousel {
+    max-width: 800px;
+    margin: 40px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    text-align: center;
+}
+
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.carousel-slide P {
+    margin: 0;
+    padding: 12px;
+    background: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    color: white;
+    background: $color-navbar;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.carousel-prev{
+    left: 15px;
+}
+
+.carousel-next{
+    right: 15px;
+}
+
+.video-section {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+.video-section video {
+    display:block;
+    width: 100%;
+    height: 500px;
+    object-fit:cover;
+}
+
+
+footer {
+    background: $color-navbar;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer-icon {
+    margin-top: 15px;
+
+    svg {
+        width: 32px;
+        height: 32px;
+        fill: orange;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    img:hover {
+        transform: scale(1.8);
+    }
+}
+
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.column {
+    background:white;
+    padding: 20px;
+    text-align: center;
+}
+
+.column img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal.modal-open {
+    display:flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align:center;
+    color: black;
+}
+
+.modal-buttons {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.modal-buttons button {
+    padding: 25px;
+    background: white;
+    border: none; 
+    cursor: pointer;
+}
+
+.modal-buttons img {
+    width: 48px;
+    height: 48px;
+}
+
+.modal-buttons span {
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-content button[data-modal-close] {
+    float: right;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links a.active {
+    color: orange;
+    font-weight: bold;
+}
+
+#explore {
+    background-image: url("../assets/ageofempires.webp");
+    background-attachment:fixed;
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+@media (max-width: 768px) {
+
+    .nav-content {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+        padding-left: 0;
+        padding-right: 10px;
+    }
+     
+
+
+    .nav-links {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        a {
+            font-size: 14px;
+        }
+    }
+
+    .banner {
+        min-height: 60vh;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .columns {
+        grid-template-columns: 1fr;
+    }
+    .modal-buttoms {
+        grid-template-columns:1fr;
+    }
+
+    .carousel-slide img {
+        height: 300px;
+    }
+
+    .video-section video {
+        height: 300px;
+    }
+}
+

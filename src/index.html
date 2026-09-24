@@ -7,7 +7,224 @@
         <title>MP1</title>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+    
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="#home" class="logo">zm22</a>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#gallery">Favorites</a>
+                    <a href="#highlights">Upcoming</a>
+                    <a href="#media">Media</a>
+                    <a href="#explore">Interests</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+            </div>
+        </nav>
+
+        <header id="home">
+
+            <div class="banner">
+                <h1>Welcome</h1>
+                <p>To Zack's MP1 CS 409's Single Page</p>
+            </div>
+        </header>
+
+
+        <main>
+            
+            <section id="about">
+                <div class="content">
+                    <h2>About</h2>
+                    <img src="../src/assets/zack.png" alt="Image of Zachary McKinney"/>
+                    <h1>Zachary McKinney</h1>
+                    <h3>zm22@illinois.edu</h3>
+                    <a href="https://github.com/zmckinney22">GitHub</a>
+                    <p>I am a Computer
+                    Science student at the University of Illinois Urbana-Champaign. I am currently a senior and I am interested in software engineering and game development.
+                    However, I am taking other classes like web-development because many workplaces require knowledge. It's also great to be able to modify a website for other work relate reasons (maintenace or small edits).
+                    </p>
+                    <p> I am trying to get an internship in software engineering after I graduate. I will be graudating in May 2027.</p>
+                </div>
+            </section>
+            
+            <section id="gallery">
+                <div class="content">
+                    <h2>My Favorite Games</h2>
+                    
+                    <div class="carousel">
+                        <div class="carousel-slides">
+                            <div class="carousel-slide">
+                                <img src="..\src\assets\helldivers2.jpg" alt="image of Helldivers 2 cover">
+                                <p>Helldivers 2</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="..\src\assets\coh2.jpg" alt="Image of Company of Heroes 2 gameplay">
+                                <p>Company of Heroes 2</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="..\src\assets\deadlock.png" alt="Image of Deadlock Art">
+                                <p>Deadlock</p>
+                            </div>
+                        </div>
+    
+                        <button class="carousel-prev">←</button>
+                        <button class="carousel-next">→</button>
+                    </div>
+
+                </div>
+            </section>
+            
+
+            <!-- REQUIREMENT 6 -->
+            <section id="highlights">
+                <div class="content">
+
+                    <h2>Games I want to Play</h2>
+
+                    <div class="columns">
+
+                        <div class="column">
+                            <img src="..\src\assets\wardogs.jpg" alt="Img of Wardogs cover">
+                            <h3>Wardogs</h3>
+                            <p>This is like a mix a Tarkov and Battlefield. It has a lot of customization. It's realistic but not too challenging.</p>
+                        </div>
+                        
+                        <div class="column">
+                            <img src="..\src\assets\foxholegame.jpg" alt="Img of Foxhole cover">
+                            <h3>Foxhole</h3>
+                            <p>A few of my friends have this game and play it. The reviews are bad right now, so I'm reluctant about buying it. I only want to play it because of my friends.</p>
+                        </div>
+                        
+                        <div class="column">
+                            <img src="..\src\assets\iron_nest.jpg" alt="Img of Iron Nest cover">
+                            <h3>Iron Nest</h3>
+                            <p>Iron Nest is a really cool complicated game. It's a planning and strategy game.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="media">
+                <div class="content video-section">
+                    <h2>Video from iStock</h2>
+                    <p><a href="https://www.istockphoto.com/video/mock-up-fantasy-rpg-moba-video-game-gameplay-with-role-playing-personage-doing-gm1265220754-370770076">Source.</a> I do not play League of Legends, but found this free video of it. I thought it was relevant to the theme of the website, so I included it.</p>
+
+                    <video autoplay muted loop playsinline>
+                        <source src="..\src\assets\istockphoto-1265220754-640_adpp_is.mp4" type="video/mp4">
+                        Browser does not support MP4
+                    </video>
+                </div>
+            </section>
+
+
+            <section id="explore">
+                <div class="content">
+
+                    <h2>Gaming Interests</h2>
+
+                    <div class="modal-buttons">
+                        <button data-modal-open="fps-modal">
+                            <img src="../src/assets/crosshair-simple-svgrepo-com.svg" alt="">
+                            <span>FPS</span>
+                        </button>
+                        <button data-modal-open="strategy-modal">
+                            <img src="../src/assets/chess-knight-svgrepo-com.svg" alt="">
+                            <span>Strategy</span>
+                        </button>
+                        <button data-modal-open="sandbox-modal">
+                            <img src="../src/assets/cube-solid-svgrepo-com.svg" alt="">
+                            <span>Sandbox</span>
+                        </button>
+                    </div>
+
+                    <div class="modal" id="fps-modal">
+                        <div class="modal-content">
+                            <button data-modal-close>x</button>
+                            <h2>FPS</h2>
+                            <p>I like FPS games because I grew up with it. I like FPS games like Battlefield. Sometimes they can get irritating so I it's not the main genre I play.</p>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="strategy-modal">
+                        <div class="modal-content">
+                            <button data-modal-close>x</button>
+                            <h2>Strategy</h2>
+                            <p>I like strategy games like Company of Heroes 2, Hearts of Iron 4, or Age of Empires. I also like turn based strategy games like the old Fallout games, but I have a hard time finding good ones.</p>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="sandbox-modal">
+                        <div class="modal-content">
+                            <button data-modal-close>x</button>
+                            <h2>Sandbox</h2>
+                            <p>I like games with an aspect of sandbox, not necessarily with the whole game genre being a sandbox. For example, Battlefield is consider partially a sandbox. There's a lot of freedom. Zomboid is a sandbox zombid survival game, that's a ton of fun. In all, I like games with a lot of replayability like Deadlock or Hearts of Iron. There's a lot of options to choose from each time you play. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+
+            <section id="contact">
+                <div class="content">
+
+                    <h2>Contact</h2>
+
+                    <p>Thanks for checking out this site. My school email is zm22@illinois.edu. You can find my github below. The linkedin and Discord does not work though. </p>
+
+                </div>
+            </section>
+
+        </main>
+
+    <footer>
+
+
+        <!-- Icons downloaded via FontAwesome -->
+
+        <div class="social-links">
+            <a href="https://github.com/zmckinney22" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
+                <img src="../src/assets/github-brands-solid-full.svg">
+            </a>
+
+
+            <a href="mailto:zm22@illinois.edu" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email">
+                <img src="..\src\assets\reply-solid-full.svg">
+            </a>
+
+            <!-- LinkedIn doesn't work on Purpose. Used in project for requirements -->
+            <a href="#" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <img src="..\src\assets\linkedin-brands-solid-full.svg">
+            </a>
+            
+            <!-- Discord doesn't work on Purpose. Used in project for requirements -->
+            <a href="#" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord">
+                <img src="..\src\assets\discord-brands-solid-full.svg">
+            </a>
+
+
+
+        </div>
+
+    </footer>
+        
     </body>
 </html>
